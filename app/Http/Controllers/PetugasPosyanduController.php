@@ -41,9 +41,9 @@ class PetugasPosyanduController extends Controller
         }
     }
 
-    public function update(Request $request, PetugasPosyandu $petugasPosyandu)
+    public function update(Request $request, $id)
     {
-        $p = PetugasPosyandu::findOrFail($petugasPosyandu->id);
+        $p = PetugasPosyandu::findOrFail($id);
         $request->validate([
             'nama' => 'required',
             'email' => 'required',
@@ -65,9 +65,9 @@ class PetugasPosyanduController extends Controller
         }
     }
 
-    public function destroy(PetugasPosyandu $petugasPosyandu)
+    public function destroy($id)
     {
-        $p = PetugasPosyandu::findOrFail($petugasPosyandu->id);
+        $p = PetugasPosyandu::findOrFail($id);
         try {
             $p->delete();
             $response = [
