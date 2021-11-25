@@ -11,7 +11,7 @@ class PetugasPosyanduController extends Controller
     {
         $petugasPosyandu = PetugasPosyandu::all();
         $response = [
-            'pesan' => 'Data Pelanggan',
+            'pesan' => 'Data Petugas Posyandu',
             'data' => $petugasPosyandu,
         ];
         return response($response, 200);
@@ -30,7 +30,7 @@ class PetugasPosyanduController extends Controller
         try {
             $petugasPosyandu = PetugasPosyandu::create($request->all());
             $response = [
-                'pesan' => 'Ditambahkan 1 Pelanggan',
+                'pesan' => 'Ditambahkan 1 Petugas Posyandu',
                 'data' => $petugasPosyandu,
             ];
             return response($response, 201);
@@ -54,7 +54,7 @@ class PetugasPosyanduController extends Controller
         try {
             $p->update($request->all());
             $response = [
-                'pesan' => 'Terupdate 1 Pelanggan',
+                'pesan' => 'Terupdate 1 Petugas Posyandu',
                 'data' => $p,
             ];
             return response($response, 200);
@@ -71,7 +71,7 @@ class PetugasPosyanduController extends Controller
         try {
             $p->delete();
             $response = [
-                'pesan' => 'Terhapus 1 Pelanggan',
+                'pesan' => 'Terhapus 1 Petugas Posyandu',
             ];
             return response($response, 200);
         } catch (\Throwable $th) {
