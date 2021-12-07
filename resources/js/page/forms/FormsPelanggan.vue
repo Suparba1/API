@@ -1,32 +1,37 @@
 <template>
     <div>
-        <h1>Form Tambah</h1>
-        <div class="row">
-            <div class="col">
-                <div class="card p-4">
-                    <form @submit.prevent="saveData">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nama</label>
-                            <input v-model="datas.nama" type="text" class="form-control" id="name" />
-                        </div>
+        <div class="row mx-auto">
+            <div class="col-lg-2 hidden-sm"></div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header p-4">
+                        <span class="card-title h4">Tambah Pelanggan</span>
+                    </div>
+                    <div class="card-content p-4">
+                        <form @submit.prevent="saveData">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nama</label>
+                                <input v-model="datas.nama" type="text" class="form-control" id="name" />
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input v-model="datas.email" type="email" class="form-control" id="email" />
-                        </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input v-model="datas.email" type="email" class="form-control" id="email" />
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="telp" class="form-label">Telepon</label>
-                            <input v-model="datas.no_telp" type="number" class="form-control" id="telp" />
-                        </div>
+                            <div class="mb-3">
+                                <label for="telp" class="form-label">Telepon</label>
+                                <input v-model="datas.no_telp" type="number" class="form-control" id="telp" />
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <input v-model="datas.alamat" type="text" class="form-control" id="alamat" />
-                        </div>
+                            <div class="mb-3">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <input v-model="datas.alamat" type="text" class="form-control" id="alamat" />
+                            </div>
 
-                        <button class="btn btn-dark">Submit</button>
-                    </form>
+                            <button class="btn btn-dark">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
